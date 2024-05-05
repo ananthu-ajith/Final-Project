@@ -1,0 +1,22 @@
+<main>
+    <div class="formcontainer">
+    <form class="form" [formGroup]="form">
+        <section>
+        <label>Username</label>
+        <input type="text" formControlName="Username">
+    </section>
+    <section>
+        <label>Password</label>
+        <input type="password" formControlName="Password">
+    </section>
+        <button type="submit" (click)="login()">Log in</button>
+    </form>
+    <div class="sign">
+        <label>Don't have an account?</label> 
+        <a routerLink="" routerLinkActive="active">Sign Up</a>
+        
+    </div>
+</div>
+</main>
+
+<router-outlet></router-outlet>
