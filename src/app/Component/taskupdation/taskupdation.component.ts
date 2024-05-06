@@ -46,7 +46,7 @@ export class TaskupdationComponent {
       error:error=>Swal.fire({
         icon: "error",
         title: "Oops...",
-        text: error,
+        text: "Not connected to the Server",
       })
       
      }
@@ -57,10 +57,10 @@ export class TaskupdationComponent {
       next: (data: any) => 
         this.completedarr = data,
       error:error=>Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: error,
-      })
+          icon: "error",
+          title: "Oops...",
+          text: "Not connected to the Server",
+        })
       
      }
 
@@ -115,7 +115,7 @@ export class TaskupdationComponent {
         error:error=>Swal.fire({
           icon: "error",
           title: "Oops...",
-          text: error,
+          text: "Not connected to the Server",
         })
         
       }
@@ -141,7 +141,7 @@ export class TaskupdationComponent {
         error:error=>Swal.fire({
           icon: "error",
           title: "Oops...",
-          text: error,
+          text: "Not connected to the Server",
         })
         
       }
@@ -163,7 +163,7 @@ export class TaskupdationComponent {
         error:error=>Swal.fire({
           icon: "error",
           title: "Oops...",
-          text: error,
+          text: "Not connected to the Server",
         })
         
       }
@@ -179,7 +179,7 @@ export class TaskupdationComponent {
         error:error=>Swal.fire({
           icon: "error",
           title: "Oops...",
-          text: error,
+          text: "Not connected to the Server",
         })
         
        }

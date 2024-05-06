@@ -85,7 +85,7 @@ export class DashboardComponent {
         error: error => Swal.fire({
           icon: "error",
           title: "Oops...",
-          text: error,
+          text: "Not connected to the Server",
         })
 
       }
@@ -100,7 +100,7 @@ export class DashboardComponent {
         error: error => Swal.fire({
           icon: "error",
           title: "Oops...",
-          text: error,
+          text: "Not connected to the Server",
         })
 
       }
@@ -121,7 +121,7 @@ export class DashboardComponent {
         error: error => Swal.fire({
           icon: "error",
           title: "Oops...",
-          text: error,
+          text: "Not connected to the Server",
         })
       }
     )
@@ -143,7 +143,7 @@ export class DashboardComponent {
         error: error => Swal.fire({
           icon: "error",
           title: "Oops...",
-          text: error,
+          text: "Not connected to the Server",
         })
       }
     )
@@ -169,7 +169,7 @@ export class DashboardComponent {
         error: error => Swal.fire({
           icon: "error",
           title: "Oops...",
-          text: error,
+          text: "Not connected to the Server",
         })
       }
     )
@@ -289,7 +289,7 @@ export class DashboardComponent {
         error: error => Swal.fire({
           icon: "error",
           title: "Oops...",
-          text: error,
+          text: "Not connected to the Server",
         })
       }
     )
@@ -313,7 +313,7 @@ export class DashboardComponent {
         error: error => Swal.fire({
           icon: "error",
           title: "Oops...",
-          text: error,
+          text: "Not connected to the Server",
         })
 
 
@@ -328,7 +328,7 @@ export class DashboardComponent {
           error: error => Swal.fire({
             icon: "error",
             title: "Oops...",
-            text: error,
+            text: "Not connected to the Server",
           })
 
         }
@@ -350,7 +350,7 @@ export class DashboardComponent {
         error: error => Swal.fire({
           icon: "error",
           title: "Oops...",
-          text: error,
+          text: "Not connected to the Server",
         })
 
       }
@@ -367,7 +367,7 @@ export class DashboardComponent {
           error: error => Swal.fire({
             icon: "error",
             title: "Oops...",
-            text: error,
+            text: "Not connected to the Server",
           })
 
         }
@@ -396,7 +396,7 @@ export class DashboardComponent {
         error: error => Swal.fire({
           icon: "error",
           title: "Oops...",
-          text: error,
+          text: "Not connected to the Server",
         })
 
       }

@@ -59,7 +59,7 @@ this.tasklist.getsingleuser(this.userid).subscribe(
     error:error=>Swal.fire({
       icon: "error",
       title: "Oops...",
-      text: error,
+      text: "Not connected to the Server",
     })
     
   }
@@ -81,7 +81,7 @@ rendertask(){
       error:error=>Swal.fire({
         icon: "error",
         title: "Oops...",
-        text: error,
+        text: "Not connected to the Server",
       })
       
     }
@@ -111,7 +111,7 @@ savetask(a:any,b:any,c:any)
             error:error=>Swal.fire({
               icon: "error",
               title: "Oops...",
-              text: error,
+              text: "Not connected to the Server",
             })
             
           }

@@ -38,7 +38,7 @@ useremail:any
         error:error=>Swal.fire({
           icon: "error",
           title: "Oops...",
-          text: error,
+          text: "Not connected to the Server",
         })
         
       }
@@ -62,7 +62,7 @@ useremail:any
           error:error=>Swal.fire({
             icon: "error",
             title: "Oops...",
-            text: error,
+            text: "Not connected to the Server",
           })
           
         }
@@ -114,7 +114,7 @@ deletaccnt(){
         error:error=>Swal.fire({
           icon: "error",
           title: "Oops...",
-          text: error,
+          text: "Not connected to the Server",
         })
         
        }
