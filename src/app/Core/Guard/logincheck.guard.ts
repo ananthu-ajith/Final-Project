@@ -17,12 +17,8 @@ for (const user of users) {
   if (user.Username === userinfo) {
     
     
-      // Check if the password matches
       if (user.Password === userpass) {
-          // console.log('Match found during loop');
-          // Clear current user and password from local storage
-          // localStorage.removeItem('curuser');
-          // localStorage.removeItem('curpass');
+         
           return true; // Allow navigation
       } else {
           alert('Incorrect password');
@@ -34,7 +30,6 @@ for (const user of users) {
 
 
 
-// If no match is found, display an alert for incorrect username
 alert('Incorrect username');
 return false; // Deny navigation
 
