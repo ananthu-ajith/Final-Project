@@ -4,6 +4,7 @@ import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { DetailsService } from '../../../Services/details.service';
 import { CommonModule } from '@angular/common';
 import { error } from 'console';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-signup',
@@ -47,7 +48,11 @@ export class SignupComponent {
 
       {
         next:(data:any)=>this.users=data,
-        error:error=>alert('Technical Issue')
+        error:error=>Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Not connected to the Server",
+        })
         
       }
       
@@ -114,7 +119,11 @@ export class SignupComponent {
         {
           next:(data:any)=>{alert('User created successfully')
             this.ngOnInit()},
-          error:error=>alert('Technical Issue')
+          error:error=>Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Not connected to the Server",
+          })
             
         }
       );

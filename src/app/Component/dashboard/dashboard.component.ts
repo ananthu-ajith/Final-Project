@@ -5,6 +5,7 @@ import { CommonModule, Location } from '@angular/common';
 import { Router, RouterLink, RouterOutlet, } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { error } from 'console';
+import Swal from 'sweetalert2';
 Chart.register(...registerables);
 
 
@@ -14,7 +15,7 @@ Chart.register(...registerables);
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [CommonModule, FormsModule, RouterLink, RouterOutlet,],
+  imports: [CommonModule, FormsModule, RouterLink, RouterOutlet],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'
 })
@@ -81,7 +82,11 @@ export class DashboardComponent {
             return task.assignee == this.curuser || task.assignee == 'All'
           }
           ),
-        error: error => console.log(error)
+        error: error => Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Not connected to the Server",
+        })
 
       }
     )
@@ -92,7 +97,11 @@ export class DashboardComponent {
             return task.assignee == this.curuser || task.assignee == 'All'
           }
           ),
-        error: error => console.log(error)
+        error: error => Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Not connected to the Server",
+        })
 
       }
     )
@@ -109,7 +118,11 @@ export class DashboardComponent {
             return task.assignee == this.curuser || task.assignee == 'All'
           }
           ),
-        error: error => console.log(error)
+        error: error => Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Not connected to the Server",
+        })
       }
     )
 
@@ -127,7 +140,11 @@ export class DashboardComponent {
             return task.assignee == this.curuser || task.assignee == 'All'
           }
           ),
-        error: error => console.log(error)
+        error: error => Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Not connected to the Server",
+        })
       }
     )
 
@@ -149,7 +166,11 @@ export class DashboardComponent {
 
           }),
 
-        error: error => console.log(error)
+        error: error => Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Not connected to the Server",
+        })
       }
     )
 
@@ -265,7 +286,11 @@ export class DashboardComponent {
       {
         next: (data: any) =>
           this.taskdetails = data,
-        error: error => console.log(error)
+        error: error => Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Not connected to the Server",
+        })
       }
     )
     localStorage.setItem('taskid', id)
@@ -285,7 +310,11 @@ export class DashboardComponent {
       {
         next: (response: any) =>
           this.cpmpletedform = response,
-        error: error => console.log(error)
+        error: error => Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Not connected to the Server",
+        })
 
 
 
@@ -296,7 +325,11 @@ export class DashboardComponent {
     setTimeout(() => {
       this.tasklist.adddetailscomp(this.cpmpletedform).subscribe(
         {
-          error: error => console.log(error)
+          error: error => Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Not connected to the Server",
+          })
 
         }
       )
@@ -314,7 +347,11 @@ export class DashboardComponent {
       {
         next: (data: any) =>
           this.recievedform = data,
-        error: error => console.log(error)
+        error: error => Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Not connected to the Server",
+        })
 
       }
 
@@ -327,7 +364,11 @@ export class DashboardComponent {
         {
           next: (data: any) =>
             this.pendingarr = data,
-          error: error => console.log(error)
+          error: error => Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Not connected to the Server",
+          })
 
         }
       );
@@ -352,7 +393,11 @@ export class DashboardComponent {
           this.recievedform = data
 
         },
-        error: error => console.log(error)
+        error: error => Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Not connected to the Server",
+        })
 
       }
     )

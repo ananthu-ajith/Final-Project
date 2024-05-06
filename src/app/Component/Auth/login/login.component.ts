@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { DetailsService } from '../../../Services/details.service';
 import { error } from 'console';
+import Swal from 'sweetalert2';
 
 
 @Component({
@@ -43,7 +44,11 @@ export class LoginComponent {
             })
           ))
         },
-        error:error=>console.log(error)
+        error:error=>Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Not connected to the Server",
+        })
         
       }
       
