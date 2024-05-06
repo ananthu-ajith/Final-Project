@@ -114,7 +114,7 @@ export class SignupComponent {
         {
           next:(data:any)=>{alert('User created successfully')
             this.ngOnInit()},
-          error:error=>console.log(error)
+          error:error=>alert('Technical Issue')
             
         }
       );
