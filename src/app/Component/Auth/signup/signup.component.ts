@@ -47,7 +47,7 @@ export class SignupComponent {
 
       {
         next:(data:any)=>this.users=data,
-        error:error=>console.log(error)
+        error:error=>alert('Technical Issue')
         
       }
       
