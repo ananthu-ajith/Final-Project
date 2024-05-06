@@ -56,7 +56,11 @@ this.tasklist.getsingleuser(this.userid).subscribe(
   {
     next:(data:any)=>
       this.userdet=data,
-    error:error=>console.log(error)
+    error:error=>Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: error,
+    })
     
   }
 )
@@ -74,7 +78,11 @@ rendertask(){
     {
       next:(data:any)=>
         this.taskdetils=data,
-      error:error=>console.log(error)
+      error:error=>Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: error,
+      })
       
     }
   )
@@ -100,7 +108,11 @@ savetask(a:any,b:any,c:any)
           {
             next:(data:any)=>
               this.taskdetils=data,
-            error:error=>console.log(error)
+            error:error=>Swal.fire({
+              icon: "error",
+              title: "Oops...",
+              text: error,
+            })
             
           }
         

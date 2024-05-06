@@ -35,7 +35,11 @@ useremail:any
       {
         next:(data:any)=>
           this.userdet=data,
-        error:error=>console.log(error)
+        error:error=>Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: error,
+        })
         
       }
     )
@@ -55,7 +59,11 @@ useremail:any
     setTimeout(() => {
       this.taskdetails.patchuserdetails(this.userid,senddata).subscribe(
         {
-          error:error=>console.log(error)
+          error:error=>Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: error,
+          })
           
         }
         ) 
@@ -103,7 +111,11 @@ deletaccnt(){
        {
         next: (data:any)=>
           this.deletedid=data,
-        error:error=>console.log(error)
+        error:error=>Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: error,
+        })
         
        }
       )

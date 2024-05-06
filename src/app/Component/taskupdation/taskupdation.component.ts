@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { error } from 'console';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-taskupdation',
@@ -42,7 +43,11 @@ export class TaskupdationComponent {
         )
         this.combined = this.recievedform
       },
-      error:error=>console.log(error)
+      error:error=>Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: error,
+      })
       
      }
   )
@@ -51,7 +56,11 @@ export class TaskupdationComponent {
      {
       next: (data: any) => 
         this.completedarr = data,
-      error:error=>console.log(error)
+      error:error=>Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: error,
+      })
       
      }
 
@@ -103,7 +112,11 @@ export class TaskupdationComponent {
       {
         next:  (data: any) => 
           this.sendform = data,
-        error:error=>console.log(error)
+        error:error=>Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: error,
+        })
         
       }
 
@@ -125,7 +138,11 @@ export class TaskupdationComponent {
       {
         next:(data: any) => 
           this.recievedform = data,
-        error:error=>console.log(error)
+        error:error=>Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: error,
+        })
         
       }
 
@@ -143,7 +160,11 @@ export class TaskupdationComponent {
       {
         next:(response: any) => 
           this.cpmpletedform = response,
-        error:error=>console.log(error)
+        error:error=>Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: error,
+        })
         
       }
 
@@ -155,7 +176,11 @@ export class TaskupdationComponent {
     setTimeout(() => {
       this.taskdetails.adddetailscomp(this.cpmpletedform).subscribe(
        {
-        error:error=>console.log(error)
+        error:error=>Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: error,
+        })
         
        }
     )
