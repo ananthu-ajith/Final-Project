@@ -65,6 +65,8 @@ export class DashboardComponent {
 
   }
 
+    // Cleanup chart instance when component is destroyed
+
   ngOnDestroy() {
     if (this.chartInstance) {
       this.chartInstance.destroy();
@@ -159,6 +161,8 @@ export class DashboardComponent {
   }
 
 
+  // Handle filter change
+
   filterchange() {
     if (this.filtertype == 'All') {
       this.rendertask()
@@ -179,6 +183,8 @@ export class DashboardComponent {
     this.chartmedium = this.pendingarr.filter((task: any) => task.priority === 'Medium').length;
     this.charthigh = this.pendingarr.filter((task: any) => task.priority === 'High').length;
     this.chartlow = this.pendingarr.filter((task: any) => task.priority === 'Low').length;
+
+        // Destroy existing chart instance if any
 
 
     if (this.chartInstance) {
@@ -366,12 +372,6 @@ export class DashboardComponent {
       const dateA = new Date(a.due_date);
       const dateB = new Date(b.due_date);
 
-      // Check if date is invalid
-      if (isNaN(dateA.getTime()) || isNaN(dateB.getTime())) {
-        console.error('Invalid date:', dateA, dateB);
-        return 0;
-      }
-
       return dateA.getTime() - dateB.getTime();
     });
 
@@ -385,11 +385,6 @@ export class DashboardComponent {
 
       const dateA = new Date(a.due_date);
       const dateB = new Date(b.due_date);
-
-      if (isNaN(dateA.getTime()) || isNaN(dateB.getTime())) {
-        console.error('Invalid date:', dateA, dateB);
-        return 0;
-      }
 
       return dateB.getTime() - dateA.getTime();
     });

@@ -29,6 +29,8 @@ export class LoginComponent {
     })
 
 
+    // Store user data in localStorage
+
     this.taskdetails.getuserdetails().subscribe(
 
       {
@@ -45,17 +47,7 @@ export class LoginComponent {
         
       }
       
-    //   (data: any) => {
-      
-    //   localStorage.setItem('users', JSON.stringify(
-    //     data.map((user: any) => {
-    //       const { id, Username, Password } = user;
-    //       return { id, Username, Password };
-    //     })
-    //   ))
-    // }, (error) => {
-    //   console.error('Error creating user:', error);
-    // }
+
   );
   }
 
@@ -66,6 +58,8 @@ export class LoginComponent {
       )
     })
   }
+
+  // check if a user exists
 
   userexist() {
     return new Promise((resolve, reject) => {
@@ -84,6 +78,8 @@ export class LoginComponent {
       resolve(this.userId = this.foundUser ? this.foundUser.id : null)
     })
   }
+
+      // Async function to handle the login process
 
 
   async login() {

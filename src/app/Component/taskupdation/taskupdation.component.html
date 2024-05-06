@@ -1,14 +1,20 @@
 <main>
-
   <h1>Create New Task</h1>
+
+  <!-- Back button to navigate to the dashoard page -->
 
   <button class="btn btn-dark" id="backbtn" (click)="back()">Back</button>
 
   <!-- New Task -->
   <form class="newtask" [formGroup]="form">
+    <!-- Task name -->
+
     <section>
       <label>Task name</label>
       <input type="text" #taskname formControlName="name" required />
+
+      <!-- Error messages -->
+
       <div
         class="text-danger validate"
         *ngIf="
@@ -29,6 +35,9 @@
         >
       </div>
     </section>
+
+    <!-- Description -->
+
     <section>
       <label>Description</label>
       <textarea
@@ -39,6 +48,9 @@
         #description
         formControlName="description"
       ></textarea>
+
+      <!-- Error messages -->
+
       <div
         class="text-danger validate"
         *ngIf="
@@ -56,9 +68,16 @@
         >
       </div>
     </section>
+
+    <!-- Due date -->
+
+
     <section>
       <label>Due date</label>
       <input type="date" #due formControlName="due_date" />
+
+      <!-- Error messages -->
+      
       <div
         class="text-danger validate"
         *ngIf="
@@ -77,6 +96,8 @@
       </div>
     </section>
 
+    <!-- Priority -->
+
     <section>
       <label>Priority</label>
       <select id="prio" formControlName="priority" #updatedpri>
@@ -85,6 +106,9 @@
         <option value="Low">Low</option>
       </select>
     </section>
+
+    <!-- Assignee -->
+
     <section>
       <label>Assign To</label>
       <select formControlName="assignee" #assignee>
@@ -110,10 +134,9 @@
     </section>
   </form>
 
-
   <h1>Pending Tasks</h1>
 
-<!-- Table   -->
+  <!-- Table   -->
   <table id="table" class="table table-hover">
     <thead>
       <tr>

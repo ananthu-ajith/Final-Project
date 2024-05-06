@@ -72,13 +72,15 @@ useremail:any
 
   }
 
+  // Convert photo to base64 format
+
   onFileChange(event: any) {
     const file = event.target.files[0];
     if (file) {
         const reader = new FileReader();
         reader.onload = () => {
             const base64Data = reader.result as string;
-            // Update the base64-encoded image data in the userdet object
+            
             this.userdet.Image = base64Data;
         };
         reader.readAsDataURL(file);

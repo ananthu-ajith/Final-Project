@@ -40,9 +40,7 @@ export class SignupComponent {
     this.triggerval = false
   }
 
-  refreshPage() {
-    window.location.reload();
-  }
+    // Load user details
 
   loadUserDetails() {
     this.taskdetails.getuserdetails().subscribe(
@@ -53,14 +51,11 @@ export class SignupComponent {
         
       }
       
-    //   (data: any) => {
-    //   this.users = data;
-    // }, (error) => {
-    //   console.error('Error fetching user details:', error);
-    // }
   
   );
   }
+
+  // Convert photo to base64 format
 
   onFileChange(event: any) {
     const file = event.target.files[0];
@@ -78,6 +73,7 @@ export class SignupComponent {
 
   create() {
 
+        // Values from the form
 
     const email = this.form.get('Email')?.value;
     const username = this.form.get('Username')?.value;
@@ -121,13 +117,6 @@ export class SignupComponent {
           error:error=>console.log(error)
             
         }
-      //   (data: any) => {
-
-      //   alert('User created successfully');
-      //   this.ngOnInit()
-      // }, (error) => {
-      //   console.error('Error creating user:', error);
-      // }
       );
     }
 

@@ -1,7 +1,12 @@
 <main>
+  <!-- Button to navigate to the dashboard page -->
+
   <button class="btn btn-dark" id="backbtn" (click)="back()">Back</button>
   <h1>Task Editor</h1>
   @if (edit) {
+
+  <!-- Display the details of the task in read-only mode -->
+
   <section class="taskdetails">
     <label>Task Name</label>
     <p>{{ taskdetils.name }}</p>
@@ -13,6 +18,9 @@
     <p>{{ taskdetils.priority }}</p>
     <label>Assignee</label>
     <p>{{ taskdetils.assignee }}</p>
+
+    <!-- Button to enable editing -->
+
     <button class="btn btn-primary" (click)="edittask()">Edit</button>
   </section>
   } @else {
@@ -62,6 +70,7 @@
     <p>{{ taskdetils.assignee }}</p>
 
     }
+    <!-- Button to save the task -->
 
     <button
       class="btn btn-success"

@@ -10,33 +10,6 @@
       "status": "Pending"
     },
     {
-      "id": "d559",
-      "name": "task1",
-      "description": "asdasdwdadasaaaaaaaaaaaaaaaaaaaaasddddddd",
-      "due_date": "2024-05-16",
-      "priority": "Medium",
-      "assignee": "All",
-      "status": "Pending"
-    },
-    {
-      "id": "2367",
-      "name": "asdwasd",
-      "description": "asdwddfffasd",
-      "due_date": "2024-05-22",
-      "priority": "Medium",
-      "assignee": "All",
-      "status": "Pending"
-    },
-    {
-      "id": "60a3",
-      "name": "zxcasd",
-      "description": "assddasdasd",
-      "due_date": "2024-05-23",
-      "priority": "High",
-      "assignee": "All",
-      "status": "Pending"
-    },
-    {
       "id": "c224",
       "name": "adsawd",
       "description": "asdasdasdsa",
@@ -52,6 +25,15 @@
       "due_date": "2024-05-24",
       "priority": "Low",
       "assignee": "All",
+      "status": "Pending"
+    },
+    {
+      "id": "1d4a",
+      "name": "asdddddd",
+      "description": "aaaaaaaaaaa",
+      "due_date": "2024-05-16",
+      "priority": "High",
+      "assignee": "asdasd",
       "status": "Pending"
     }
   ],
@@ -90,11 +72,20 @@
       "status": "Completed"
     },
     {
-      "id": "8350",
-      "name": "adswd",
-      "description": "adwdadasdasd",
-      "due_date": "2024-04-29",
+      "id": "2367",
+      "name": "asdwasd",
+      "description": "asdwddfffasd",
+      "due_date": "2024-05-22",
       "priority": "Medium",
+      "assignee": "All",
+      "status": "Completed"
+    },
+    {
+      "id": "60a3",
+      "name": "zxcasd",
+      "description": "assddasdasd",
+      "due_date": "2024-05-23",
+      "priority": "High",
       "assignee": "All",
       "status": "Completed"
     }

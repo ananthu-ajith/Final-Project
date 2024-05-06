@@ -3,20 +3,34 @@
 <h1>Sign Up</h1>
 <p class="intro">Welcome To Task Manager</p>
 
+<!-- Form -->
+
 <form [formGroup]="form">
+
+    <!-- Email  -->
 
     <section>
     <label>Email</label>
     <input type="email" formControlName="Email">
+
+    <!-- Error messages -->
+
     <div class="text-danger validate" *ngIf="form.controls['Email'].invalid && (form.controls['Email'].touched || form.controls['Email'].dirty || triggerval)">
         <span *ngIf="form.controls['Email'].errors?.['required']">Mandatory</span>
         <span *ngIf="form.controls['Email'].errors?.['email']">Invalid Format</span>
     </div>
     </section>
 
+
+    <!-- Username  -->
+
 <section>
     <label>Username</label>
     <input type="text" formControlName="Username">
+
+        <!-- Error messages -->
+
+
     <div class="text-danger validate" *ngIf="form.controls['Username'].invalid && (form.controls['Username'].touched || form.controls['Username'].dirty || triggerval)">
         <span *ngIf="form.controls['Username'].errors?.['required']">Mandatory</span>
         <span *ngIf="form.controls['Username'].errors?.['minlength']">Too short</span>
@@ -24,16 +38,22 @@
     </div>
 </section>
 
+<!-- Password -->
 
 <section>
     <label>Password</label>
     <input type="password" formControlName="Password">
+
+        <!-- Error messages -->
+
+
     <div class="text-danger validate" *ngIf="form.controls['Password'].invalid && (form.controls['Password'].touched || form.controls['Password'].dirty  || triggerval)">
         <span *ngIf="form.controls['Password'].errors?.['required']">Mandatory</span>
         <span *ngIf="form.controls['Password'].errors?.['minlength']">Too short</span>
     </div>
 </section>
 
+<!-- Admin  -->
 
 <section>
     <div class="form-check form-switch">
@@ -42,20 +62,27 @@
       </div>
 </section>
 
+<!-- Photo upload -->
 
 <section>
     <label>Photo</label>
     <input type="file" id="fileInput" accept="image/*" (change)="onFileChange($event)">
     <label for="fileInput">Upload File</label>
+
+            <!-- Error messages -->
+
     <div class="text-danger validate" *ngIf="triggerval">
         <span *ngIf="imagevalidator">Mandatory</span>
     </div>
 </section>
 
+<!-- Submit -->
 
     <button type="submit" (click)="create()">Create</button>
     
 </form>
+
+<!-- Link to login  -->
 
 <div class="log">
     <label>Already a member?</label> 

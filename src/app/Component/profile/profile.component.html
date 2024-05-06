@@ -34,11 +34,20 @@
   </section>
   @if(isDisabled) {
   <section class="detailssec">
+
+    <!-- Email -->
+
     <label>Email:</label>
     <!-- <p>{{ userdet.Email }}</p> -->
     <input class="proinp" type="text" disabled [(ngModel)]="userdet.Email">
+
+    <!-- Username -->
+
     <label>Username:</label>
     <input class="proinp" type="text" disabled [(ngModel)]="userdet.Username">
+
+    <!-- Password -->
+
     <!-- <p>{{ userdet.Username }}</p> -->
     <label>Password:</label>
     <!-- <p>{{ userdet.Password }}</p> -->
